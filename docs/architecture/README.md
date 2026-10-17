@@ -1,6 +1,6 @@
 ---
-last-reviewed: 2026-09-30
-owner: ""
+last-reviewed: 2026-10-17
+owner: "@enricoag1982"
 ---
 
 # Architecture overview
@@ -9,7 +9,7 @@ This page describes the system as it is now, using the [arc42](https://arc42.org
 It is a living document: update it in the same pull request that changes the architecture, and bump `last-reviewed`.
 
 > [!NOTE]
-> **Template state:** nothing is built yet. Fill in each section once the first capabilities are specified. Write "n/a" for sections that do not apply yet instead of deleting them.
+> **Current state:** nothing is built yet. Section 3 shows the intended context, from the [options research](../research/2026-10-17-tablet-home-dashboard-options.md). Fill in the other sections once the first capabilities are specified. Write "n/a" for sections that do not apply yet instead of deleting them.
 > Split a section into its own file in this folder when it outgrows a screen, and link it from here.
 
 ## 1. Introduction and goals
@@ -25,6 +25,8 @@ It is a living document: update it in the same pull request that changes the arc
 <!-- Technical, organizational and regulatory constraints. Link the ADR that introduced each one. -->
 
 - Implementation language: not decided yet, see [ADR-0005](../decisions/0005-choose-primary-implementation-language.md).
+- Integration hub: not decided yet, see [ADR-0007](../decisions/0007-choose-the-integration-hub-for-home-devices-and-services.md). Assumed by ADR-0007 (proposed): a web page alone cannot reach the home's devices or keep secrets, so an always-on hub at home is needed.
+- Wall tablet and kiosk browser: not decided yet, see [ADR-0008](../decisions/0008-choose-the-wall-tablet-and-kiosk-browser.md).
 
 ## 3. Context and scope
 
@@ -32,8 +34,10 @@ It is a living document: update it in the same pull request that changes the arc
 
 ```mermaid
 flowchart LR
-    user([User]) -->|uses| system[System<br/>tbd]
-    system -->|calls| ext[(External system<br/>tbd)]
+    household([Household]) -->|looks and taps| tablet[Wall tablet<br/>shows the dashboard]
+    tablet -->|home network| hub[Hub<br/>ADR-0007]
+    hub -->|home network| local[(Hue Bridge, Sonos,<br/>Wi-Fi lights and plugs)]
+    hub -->|internet| cloud[(Google Calendar, shared lists,<br/>Nest, Alexa, weather)]
 ```
 
 ## 4. Solution strategy

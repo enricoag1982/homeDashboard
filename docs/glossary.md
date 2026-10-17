@@ -1,6 +1,6 @@
 ---
-last-reviewed: 2026-09-30
-owner: ""
+last-reviewed: 2026-10-17
+owner: "@enricoag1982"
 ---
 
 # Glossary
@@ -31,4 +31,9 @@ These come with the template. Add domain terms in their own section below.
 
 | Term | Meaning |
 | --- | --- |
-| *(none yet)* | |
+| Dashboard | The web page shown full screen on the wall tablet: the product this repository builds. Not to be confused with a Home Assistant dashboard, Home Assistant's own configurable interface. |
+| Household | The people who live in the home and use the dashboard, and their guests. |
+| Hub | The always-on service at home that integrates devices and services for the dashboard. See [ADR-0007](decisions/0007-choose-the-integration-hub-for-home-devices-and-services.md). |
+| Integration | The hub's connection to one device family or service, for example Sonos or Google Calendar. |
+| Kiosk browser | An app that shows one web page full screen and locks the tablet to it, for example Fully Kiosk Browser. See [ADR-0008](decisions/0008-choose-the-wall-tablet-and-kiosk-browser.md). |
+| Wall tablet | The tablet mounted on the wall that shows the dashboard all day. See [ADR-0008](decisions/0008-choose-the-wall-tablet-and-kiosk-browser.md). |

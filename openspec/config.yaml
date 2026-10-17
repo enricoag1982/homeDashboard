@@ -10,7 +10,9 @@ context: |
     Accepted ADRs are binding; proposed ADRs are open questions and must not be assumed decided.
   Vocabulary: docs/glossary.md. Use its terms verbatim in specs.
   Architecture (current state): docs/architecture/README.md.
-  Implementation language: NOT decided yet (ADR-0005, Java is the leading candidate).
+  Product: a web page on a wall-mounted home tablet; options in docs/research/2026-10-17-tablet-home-dashboard-options.md.
+  Integration hub: NOT decided yet (ADR-0007). Wall tablet: NOT decided yet (ADR-0008).
+  Implementation language: NOT decided yet (ADR-0005; the research points to TypeScript).
     Until it is accepted, do not add build files, source trees or language-specific tooling.
   Process: docs/process/development-workflow.md.
 

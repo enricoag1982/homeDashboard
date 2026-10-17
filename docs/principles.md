@@ -1,6 +1,6 @@
 ---
-last-reviewed: 2026-09-30
-owner: ""
+last-reviewed: 2026-10-17
+owner: "@enricoag1982"
 ---
 
 # Principles
@@ -24,9 +24,4 @@ These come with the template. Keep, adapt or drop them.
 
 ## Product and engineering principles
 
-<!-- Replace with the principles specific to this project, in priority order. Good principles are specific enough to settle an argument, for example:
-     - "Correctness over latency: a slow right answer beats a fast wrong one."
-     - "Every externally visible change is backwards compatible for one release."
-     - "No personal data leaves the EU region." -->
-
-*To be defined.*
+*To be defined.* Candidates are in the [options research](research/2026-10-17-tablet-home-dashboard-options.md#candidate-product-principles); adopting them is a decision for the owner.

@@ -5,9 +5,10 @@ Keep it short and link rather than copy. Every line should prevent a real mistak
 
 ## Project overview
 
-<!-- Replace this paragraph: what the product is, who it is for, the one or two things that make it hard. -->
-A long-lived project run with spec-driven development. Behavior is specified in OpenSpec and decisions are recorded as ADRs.
-**Status:** no implementation yet. The implementation language is **not decided** ([ADR-0005](docs/decisions/0005-choose-primary-implementation-language.md), Java is the leading candidate).
+Home Dashboard is a web page shown full screen on a wall-mounted tablet at home. It shows and controls the household's lights, Sonos speakers, Alexa (Echo) devices and Nest thermostat, and shows the family calendar, shared lists and the weather forecast.
+What makes it hard: every device and service has a different integration route (local or cloud, official or unofficial), Amazon offers no official API to control Echo devices and Google Keep has none for personal accounts, and the page must stay glanceable and reliable on an always-on tablet without holding secrets.
+Run with spec-driven development: behavior is specified in OpenSpec and decisions are recorded as ADRs.
+**Status:** exploring options, no implementation yet. Start with the [options research](docs/research/2026-10-17-tablet-home-dashboard-options.md). Open decisions: the integration hub ([ADR-0007](docs/decisions/0007-choose-the-integration-hub-for-home-devices-and-services.md)), the wall tablet ([ADR-0008](docs/decisions/0008-choose-the-wall-tablet-and-kiosk-browser.md)) and the implementation language ([ADR-0005](docs/decisions/0005-choose-primary-implementation-language.md); the research points to TypeScript).
 
 ## Sources of truth
 
